@@ -33,7 +33,7 @@ export default defineAppConfig({
         body: 'text-md text-dark-blue',
         trailingIcon: 'text-cyan',
         leadingIcon: 'text-gray',
-        item: 'text-gray'
+        item: 'border-gray'
       }
     },
   },

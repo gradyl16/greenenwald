@@ -3,9 +3,9 @@
     <section id="about">
       <div>
         <div class="rounded-3xl bg-dark-gray p-8">
-          <h2 class="text-2xl">About</h2>
+          <h2>About</h2>
           <div class="flex flex-col sm:flex-row">
-            <div>
+            <div class="pr-0 sm:pr-12">
               <p>
                 Welcome, visitor! I am a first year Ph.D. student in Computer Science at the University of Illinois
                 Urbana-Champaign, advised by Professor
@@ -32,9 +32,12 @@ to="https://nikita-phd.pages.dev" target="_blank" class="hover:underline text-dr
                 way :D
               </p>
             </div>
-            <NuxtImg
-src="/images/portrait.jpg" alt="Portrait of Dylen Greenenwald"
-              class="w-full sm:w-auto max-w-xs self-start rounded-3xl" />
+            <NuxtPicture
+              src="/images/portrait.webp"
+              :img-attrs="{
+                class: 'rounded-3xl w-full min-w-xs',
+              }"
+            />
           </div>
         </div>
       </div>
@@ -42,7 +45,7 @@ src="/images/portrait.jpg" alt="Portrait of Dylen Greenenwald"
     <!-- News -->
     <section id="news">
       <div class="rounded-3xl bg-dark-gray p-8">
-        <h2 class="text-dracula-green">News</h2>
+        <h2>News</h2>
         <AccordionNews />
       </div>
     </section>
@@ -55,3 +58,15 @@ src="/images/portrait.jpg" alt="Portrait of Dylen Greenenwald"
     </section>
   </div>
 </template>
+
+<style>
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.4s;
+}
+
+.layout-enter-from,
+.layout-leave-to {
+  filter: grayscale(1);
+}
+</style>
