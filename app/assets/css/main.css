@@ -2,28 +2,26 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
-
-  --color-dark-gray: #282A36;
-  --color-gray: #44475A;
-  --color-white: #F8F8F2;
-  --color-dark-blue: #6272A4;
-  --color-cyan: #8BE9FD;
-  --color-green: #50FA7B;
-  --color-orange: #FFB86C;
-  --color-pink: #FF79C6;
-  --color-purple: #BD93F9;
-  --color-red: #FF5555;
-  --color-yellow: #F1FA8C;
-}
-
-* {
-  font-family: 'Fira Code'
+  --color-dark-gray: #282a36;
+  --color-gray: #44475a;
+  --color-white: #f8f8f2;
+  --color-dark-blue: #6272a4;
+  --color-cyan: #8be9fd;
+  --color-green: #50fa7b;
+  --color-orange: #ffb86c;
+  --color-pink: #ff79c6;
+  --color-purple: #bd93f9;
+  --color-red: #ff5555;
+  --color-yellow: #f1fa8c;
 }
 
 @layer base {
+  * {
+    font-family: "Fira Code";
+  }
+
   body {
-    @apply bg-gray;
+    @apply bg-gray text-dark-blue;
   }
 
   h1 {
@@ -31,14 +29,53 @@
   }
 
   h2 {
-    @apply mb-8 text-green text-5xl font-bold;
+    @apply mb-8 text-green sm:text-5xl text-4xl font-bold;
+  }
+
+  h3 {
+    @apply text-purple sm:text-2xl text-xl font-semibold;
   }
 
   p {
-    @apply mb-4 mr-4 text-dark-blue;
+    @apply mb-4;
   }
 
   section {
     @apply my-10;
+  }
+
+  /* Page transitions */
+  .page-enter-active,
+  .page-leave-active {
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .page-enter-from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .page-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .fade-enter-from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  .fade-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
   }
 }

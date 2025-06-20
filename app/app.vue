@@ -1,17 +1,19 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Dylen Greenenwald',
-  ogTitle: 'Dylen Greenenwald',
-  description: 'Explorer. Security researcher. Juggler. Come find out what else I am at my personal website.',
-  ogDescription: 'Explorer. Security researcher. Juggler. Come find out what else I am at my personal website.',
-  ogImage: 'https://greenenwald.com/portrait.jpg',
-})
+  title: "Dylen Greenenwald",
+  ogTitle: "Dylen Greenenwald",
+  description:
+    "Explorer. Security researcher. Juggler. Come find out what else I am at my personal website.",
+  ogDescription:
+    "Explorer. Security researcher. Juggler. Come find out what else I am at my personal website.",
+  ogImage: "https://greenenwald.com/portrait.jpg",
+});
 
-const hydrated = ref(false)
+const hydrated = ref(false);
 
 onMounted(() => {
-  hydrated.value = true
-})
+  hydrated.value = true;
+});
 </script>
 
 <template>
