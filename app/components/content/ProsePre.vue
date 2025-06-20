@@ -6,7 +6,7 @@
       class="flex justify-between items-center bg-gray/10 text-white px-4 py-2 rounded-t-md"
     >
       <span>{{ filename }}</span>
-      <span>{{ language }}</span>
+      <span class="transition-opacity duration-200 group-hover:opacity-0">{{ language }}</span>
     </div>
     <pre
       :class="[
