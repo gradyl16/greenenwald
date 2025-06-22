@@ -20,11 +20,23 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthub/core",
   ],
+  fonts: {
+    families: [
+      {
+        name: "Fira Code",
+        fallbacks: [
+          "ui-monospace", "SFMono-Regular", "monospace"
+        ]
+      }
+    ],
+  },
   css: ["~/assets/css/main.css"],
   content: {
     build: {
       markdown: {
-        // remarkPlugins: remarkGfm,
+        remarkPlugins: {
+          "remark-gfm": {},
+        },
         toc: {
           depth: 2,
           searchDepth: 2,

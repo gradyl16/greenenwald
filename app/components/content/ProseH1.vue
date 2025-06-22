@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-5xl !text-green">
+  <h1 class="text-4xl !text-green">
     <slot />
   </h1>
 </template>

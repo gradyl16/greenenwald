@@ -23,7 +23,7 @@ export default defineAppConfig({
       slots: {
         trigger: "text-xl text-purple",
         body: "text-md text-dark-blue",
-        trailingIcon: "text-cyan",
+        trailingIcon: "text-green",
         leadingIcon: "text-gray",
         item: "border-gray",
       },
@@ -49,11 +49,6 @@ export default defineAppConfig({
       variants: {
         highlightColor: {
           primary: "text-purple",
-        },
-        active: {
-          true: {
-            // childLink: 'before:bg-purple'
-          },
         },
       },
     },

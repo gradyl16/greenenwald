@@ -7,6 +7,7 @@
       >
       <ULink
         to="/blog"
+        :class="isBlog ? 'text-purple' : ''"
         >Blog</ULink
       >
     </nav>
@@ -26,9 +27,14 @@
         <Icon
           name="uil:linkedin"
           size="3em"
-          class="text-cyan hover:text-yellow transition-colors duration-300"
+          class="text-green hover:text-yellow transition-colors duration-300"
         />
       </ULink>
     </nav>
   </footer>
 </template>
+
+<script setup>
+const route = useRoute()
+const isBlog = computed(() => route.path.startsWith("/blog")) 
+</script>
