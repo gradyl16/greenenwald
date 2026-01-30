@@ -34,11 +34,15 @@
         and I wouldn't have it any other way :D
       </p>
     </div>
-    <NuxtPicture
-      src="/images/portrait.webp"
-      :img-attrs="{
-        class: 'rounded-3xl w-full max-w-7xl',
-      }"
-    />
+    <div
+      class="flex justify-center h-[60vh] sm:h-[85vh] /* smaller on mobile */ mt-4 sm:mt-0 /* space when stacked */ flex-shrink-0"
+    >
+      <NuxtPicture
+        src="/images/portrait.webp"
+        :img-attrs="{
+          class: 'rounded-3xl h-full w-auto object-cover',
+        }"
+      />
+    </div>
   </div>
 </template>
