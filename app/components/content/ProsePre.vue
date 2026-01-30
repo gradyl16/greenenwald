@@ -52,7 +52,7 @@ const props = withDefaults(
     highlights: () => [],
     meta: "",
     class: "",
-  },
+  }
 );
 
 // Copy to clipboard functionality

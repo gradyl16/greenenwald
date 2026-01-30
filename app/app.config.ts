@@ -29,13 +29,13 @@ export default defineAppConfig({
       },
     },
     link: {
-      base: "hover:underline",
+      base: "hover:underline"
     },
     card: {
       slots: {
         header: "rounded-t-lg bg-gray/40 font-bold text-purple",
-        footer: "rounded-b-lg bg-gray/60 font-semibold text-sm text-dark-blue",
-      },
+        footer: "rounded-b-lg bg-gray/60 font-semibold text-sm text-dark-blue"
+      }
     },
     container: {
       base: "rounded-3xl bg-dark-gray p-8",
