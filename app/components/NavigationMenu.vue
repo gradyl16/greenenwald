@@ -35,7 +35,7 @@ const items = computed(() => {
       label: "Blog",
       to: "/blog",
       icon: "uil:laptop",
-      active: isBlog.value
+      active: isBlog.value,
     },
     {
       label: "CV",

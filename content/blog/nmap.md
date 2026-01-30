@@ -18,8 +18,8 @@ Nmap port states:
 
 - `open` => connection successfully established
 - `closed` => `RST` (i.e. "reset") packet sent by host
-- `filtered` => no response or error code received; cannot *definitively* determine state
-- `unfiltered` => only a valid state for a `TCP`/`ACK` scan; port is accessible, but cannot *definitively* determine state
+- `filtered` => no response or error code received; cannot _definitively_ determine state
+- `unfiltered` => only a valid state for a `TCP`/`ACK` scan; port is accessible, but cannot _definitively_ determine state
 - `open|filtered` => no response (i.e. potentially packet/firewall filtered)
 - `closed|filtered` => only possible in `IP` ID idle scan
 
@@ -63,7 +63,7 @@ However, it's still useful in the aforementioned accuracy, and it tends to be le
 
 ### Filtered Ports
 
-Ports can be filtered for many reasons, usually relating to firewall rules. Packets can either be *dropped*, or *rejected*. When a packet is dropped `Nmap` receives no response, and will retry 10 times by default (`--max-retries=10`). If a packet is dropped, scans take much longer. If it is rejected, we are receiving a reply and so the scan can be completed much more quickly. Usually, what happens in practice is that a reply will be sent that indicates that the port is unreachable; this gives us a strong indication that the packet was rejected by the firewall.
+Ports can be filtered for many reasons, usually relating to firewall rules. Packets can either be _dropped_, or _rejected_. When a packet is dropped `Nmap` receives no response, and will retry 10 times by default (`--max-retries=10`). If a packet is dropped, scans take much longer. If it is rejected, we are receiving a reply and so the scan can be completed much more quickly. Usually, what happens in practice is that a reply will be sent that indicates that the port is unreachable; this gives us a strong indication that the packet was rejected by the firewall.
 
 ### Discovering Open UDP Ports
 
@@ -250,14 +250,14 @@ PORT   STATE SERVICE
 MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
 ```
 
-`Nmap` provides an aggressive scanning option with the `-A` flag. This is equivalent to running default scripts (`-sC`), service version detection, `-sV`, OS detection (`-O`), *and* running `traceroute` (`--traceroute`).
+`Nmap` provides an aggressive scanning option with the `-A` flag. This is equivalent to running default scripts (`-sC`), service version detection, `-sV`, OS detection (`-O`), _and_ running `traceroute` (`--traceroute`).
 
 ### Vulnerability Assessment
 
 If you run all scripts in the `vuln` category, `Nmap` will search vulnerability databases against detected service versions to provide information on actively vulnerable software. For example:
 
 ```bash
-gradyl16@htb[/htb]$ sudo nmap 10.129.2.28 -p 80 -sV --script vuln 
+gradyl16@htb[/htb]$ sudo nmap 10.129.2.28 -p 80 -sV --script vuln
 ```
 
 ```
@@ -310,7 +310,6 @@ gradyl16@htb[/htb]$ sudo nmap 10.129.2.0/24 -F
 <SNIP>
 Nmap done: 256 IP addresses (10 hosts up) scanned in 39.44 seconds
 ```
-
 
 #### Optimized
 
@@ -390,7 +389,7 @@ These templates contain options that can also be set manually. The exact combina
 
 ## Firewall and IDS/IPS Evasion
 
-I'm only going to say this once: do not attack a system without permission from the owner! That is *highly* **illegal**, and I do not condone such unauthorized actions in any way. You are responsible for the trouble you get yourself into by not heeding my words. With that said, let's get into how to do this in an authorized setting. First, some background.
+I'm only going to say this once: do not attack a system without permission from the owner! That is _highly_ **illegal**, and I do not condone such unauthorized actions in any way. You are responsible for the trouble you get yourself into by not heeding my words. With that said, let's get into how to do this in an authorized setting. First, some background.
 
 ### Firewalls
 
@@ -398,7 +397,7 @@ A firewall is a security measure against unauthorized connections from external 
 
 ### IDS/IPS
 
-IPS and IDS work hand in hand to both proactively *prevent* suspicious activities and to *detect* them, using a variety of different techniques, depending on the system. While most commercial systems rely on pattern/signature matching schemes, academia has been exploring the feasibility of more intelligent anomaly-based IDSs that can learn to distinguish between benign and malicious traffic on a network-specific basis. Despite the draw, they are less common due to struggles with false positive detection, performance concerns, along with a variety of other factors.
+IPS and IDS work hand in hand to both proactively _prevent_ suspicious activities and to _detect_ them, using a variety of different techniques, depending on the system. While most commercial systems rely on pattern/signature matching schemes, academia has been exploring the feasibility of more intelligent anomaly-based IDSs that can learn to distinguish between benign and malicious traffic on a network-specific basis. Despite the draw, they are less common due to struggles with false positive detection, performance concerns, along with a variety of other factors.
 
 ### Nmap's Utilities
 
