@@ -1,6 +1,12 @@
 <script setup lang="ts">
 const items = ref<AccordionItem[]>([
   {
+    label: "Published at my first workshop",
+    icon: "uil:file-alt",
+    content:
+      "Took me long enough! I'm excited to announce that I am an author on my first academic paper, published at PRISM, colocated with NDSS '26. It won't be long before I get a first author paper :)",
+  },
+  {
     label: "Committed to Ph.D. Program @ UIUC",
     icon: "uil:lock",
     content:
