@@ -10,7 +10,7 @@
 
     <p class="text-purple">
       <span v-if="!pub.published" class="italic opacity-80">(To appear)</span>
-      <span> In the proceedings of </span>
+      <span> In the Proceedings of </span>
       <a
         class="text-pink underline hover:text-pink/80"
         :href="pub.venue.url"
