@@ -37,7 +37,7 @@
     <NuxtPicture
       src="/images/portrait.webp"
       :img-attrs="{
-        class: 'rounded-3xl max-h-full w-auto object-cover',
+        class: 'rounded-3xl w-full max-w-7xl',
       }"
     />
   </div>
