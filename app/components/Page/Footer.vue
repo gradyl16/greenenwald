@@ -1,15 +1,8 @@
 <template>
   <footer class="w-full bg-dark-gray text-white">
     <nav class="grid grid-flow-col gap-4 justify-center p-4">
-      <ULink
-        to="/"
-        >Home</ULink
-      >
-      <ULink
-        to="/blog"
-        :class="isBlog ? 'text-purple' : ''"
-        >Blog</ULink
-      >
+      <ULink to="/">Home</ULink>
+      <ULink to="/blog" :class="isBlog ? 'text-purple' : ''">Blog</ULink>
     </nav>
     <nav class="flex justify-center gap-4 p-4">
       <ULink to="https://github.com/gradyl16" target="_blank">
@@ -35,6 +28,6 @@
 </template>
 
 <script setup>
-const route = useRoute()
-const isBlog = computed(() => route.path.startsWith("/blog")) 
+const route = useRoute();
+const isBlog = computed(() => route.path.startsWith("/blog"));
 </script>

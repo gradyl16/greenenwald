@@ -17,12 +17,14 @@
 const route = useRoute();
 
 const content = computed(() =>
-  route.path.startsWith("/blog") ? {
-    headline: "Mental Overflow",
-    tagline: "A hacker's blog.",
-  } : {
-    headline: "Dylen Greenenwald",
-    tagline: "dgree21 [at] illinois [dot] edu",
-  }
+  route.path.startsWith("/blog")
+    ? {
+        headline: "Mental Overflow",
+        tagline: "A hacker's blog.",
+      }
+    : {
+        headline: "Dylen Greenenwald",
+        tagline: "dgree21 [at] illinois [dot] edu",
+      },
 );
 </script>
