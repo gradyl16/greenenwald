@@ -1,6 +1,6 @@
 <template>
   <h2>About</h2>
-  <div class="flex flex-col sm:flex-row">
+  <div class="flex flex-col sm:flex-row sm:items-start">
     <div class="pr-0 sm:pr-4 md:pr-8 lg:pr-12">
       <p>
         Welcome, visitor! I am a second year Ph.D. student in Computer Science
@@ -16,8 +16,8 @@
         engineering. I focus on studying the online advertising ecosystem's
         effect on user privacy. A core ideal of mine is that my work has
         <em>impact</em>. I know that this word is often used in a nebulous sort
-        of way; Specifically, my contributions should enable an ordinary person
-        to navigate the Internet more safely -- without the need for
+        of way. Specifically, I want my contributions should enable an ordinary
+        person to navigate the Internet more safely -- without the need for
         hypervigilance. Ultimately, I aim to improve user quality of life
         through the development of privacy-enhancing technologies and the study
         of emerging tracking paradigms.
@@ -34,15 +34,11 @@
         and I wouldn't have it any other way :D
       </p>
     </div>
-    <div
-      class="flex justify-center h-[60vh] sm:h-[85vh] /* smaller on mobile */ mt-4 sm:mt-0 /* space when stacked */ flex-shrink-0"
-    >
-      <NuxtPicture
-        src="/images/portrait.webp"
-        :img-attrs="{
-          class: 'rounded-3xl h-full w-auto object-cover',
-        }"
-      />
-    </div>
+    <NuxtPicture
+      src="/images/portrait.webp"
+      :img-attrs="{
+        class: 'rounded-3xl max-h-full w-auto object-cover',
+      }"
+    />
   </div>
 </template>
