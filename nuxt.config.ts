@@ -24,10 +24,19 @@ export default defineNuxtConfig({
     families: [
       {
         name: "Fira Code",
-        fallbacks: [
-          "ui-monospace", "SFMono-Regular", "monospace"
-        ]
-      }
+        provider: "local",
+        src: "/fonts/FiraCode.woff2",
+      },
+      {
+        name: "Proxima Nova",
+        provider: "local",
+        src: "/fonts/ProximaNovaRegular.woff2",
+      },
+      {
+        name: "Proxima Nova Semibold",
+        provider: "local",
+        src: "/fonts/ProximaNovaSemibold.woff2",
+      },
     ],
   },
   css: ["~/assets/css/main.css"],

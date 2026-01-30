@@ -2,8 +2,9 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --color-dark-gray: #282a36;
-  --color-gray: #44475a;
+  --color-test: #343746;
+  --color-dark-gray: #21222c;
+  --color-gray: #343746;
   --color-white: #f8f8f2;
   --color-dark-blue: #6272a4;
   --color-cyan: #8be9fd;
@@ -18,7 +19,7 @@
 @layer base {
 
   * {
-    font-family: "Fira Code";
+    font-family: "Proxima Nova Regular";
   }
 
   body {
@@ -26,19 +27,27 @@
   }
 
   h1 {
-    @apply mb-8 text-purple sm:text-6xl text-5xl font-bold;
+    font-family: "Proxima Nova Semibold";
+    @apply mb-6 text-purple sm:text-6xl text-5xl font-bold;
   }
 
   h2 {
-    @apply mb-8 text-cyan sm:text-5xl text-4xl font-bold;
+    font-family: "Proxima Nova Semibold";
+    @apply mb-6 text-green sm:text-5xl text-4xl font-bold;
   }
 
   h3 {
-    @apply text-green sm:text-2xl text-xl font-semibold;
+    font-family: "Proxima Nova Semibold";
+    @apply text-cyan sm:text-2xl text-xl font-semibold;
+  }
+
+  h4 {
+    font-family: "Proxima Nova Semibold";
+    @apply text-orange sm:text-lg text-base font-semibold;
   }
 
   p {
-    @apply mb-4;
+    @apply sm:text-base text-sm;
   }
 
   section {
