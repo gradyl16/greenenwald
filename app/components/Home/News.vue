@@ -1,5 +1,10 @@
+<template>
+  <h2>News</h2>
+  <UAccordion :items="newsEvents" />
+</template>
+
 <script setup lang="ts">
-const items = ref<AccordionItem[]>([
+const newsEvents = ref<AccordionItem[]>([
   {
     label: "Committed to Ph.D. Program @ UIUC",
     icon: "uil:lock",
@@ -20,7 +25,3 @@ const items = ref<AccordionItem[]>([
   },
 ]);
 </script>
-
-<template>
-  <UAccordion :items="items" />
-</template>
