@@ -16,7 +16,7 @@
         engineering. I focus on studying the online advertising ecosystem's
         effect on user privacy. A core ideal of mine is that my work has
         <em>impact</em>. I know that this word is often used in a nebulous sort
-        of way. Specifically, I want my contributions should enable an ordinary
+        of way. Specifically, my contributions should enable an ordinary
         person to navigate the Internet more safely -- without the need for
         hypervigilance. Ultimately, I aim to improve user quality of life
         through the development of privacy-enhancing technologies and the study
