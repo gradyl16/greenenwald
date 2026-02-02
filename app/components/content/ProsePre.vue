@@ -1,5 +1,5 @@
 <template>
-  <div class="my-8 relative group font-mono text-sm">
+  <div class="my-4 relative group font-mono text-sm">
     <!-- Filename / Language Header -->
     <div
       v-if="language !== 'text'"
