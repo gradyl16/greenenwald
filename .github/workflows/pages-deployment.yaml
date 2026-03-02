@@ -2,7 +2,7 @@ name: CI/CD
 
 on:
   push:
-      branches: ["main"]
+    branches: ["main"]
 
 permissions:
   contents: read
@@ -11,11 +11,6 @@ permissions:
   deployments: write
 
 jobs:
-  format:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Prettier
-      uses: creyD/prettier_action@v4.6
   build:
     runs-on: ubuntu-latest
     steps:
@@ -25,25 +20,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Restore cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            dist
-            .nuxt
-          key: ${{ runner.os }}-nuxt-build-${{ hashFiles('dist') }}
-          restore-keys: |
-            ${{ runner.os }}-nuxt-build-
+      - uses: oven-sh/setup-bun@v2
+      - name: Build
+        run: bun install && bun run build
+      - name: Prettier
+        uses: creyD/prettier_action@v4.6
   deploy:
     runs-on: ubuntu-latest
     name: Deploy to Cloudflare Pages
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Build
-        run: bun install && bun run build
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
