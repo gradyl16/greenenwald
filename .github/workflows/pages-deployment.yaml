@@ -25,7 +25,7 @@ jobs:
       - name: Build
         run: bun install && bun run build
       - name: Format
-        run: prettier --write .
+        run: bunx prettier --write .
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
