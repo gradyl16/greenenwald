@@ -20,7 +20,8 @@ jobs:
   format:
     runs-on: ubuntu-latest
     steps:
-      run: prettier --write .
+      - name: Format
+        run: prettier --write .
   build:
     runs-on: ubuntu-latest
     steps:
