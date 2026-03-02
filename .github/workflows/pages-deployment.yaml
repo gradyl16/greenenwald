@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: "20"
       - name: Install Bun
-      - uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2
       - name: Build
         run: bun install && bun run build
       - name: Prettier
