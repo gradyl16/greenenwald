@@ -20,11 +20,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+      - name: Install Bun
       - uses: oven-sh/setup-bun@v2
       - name: Build
         run: bun install && bun run build
       - name: Prettier
-        uses: creyD/prettier_action@v4.6
+        run: prettier --write .
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
