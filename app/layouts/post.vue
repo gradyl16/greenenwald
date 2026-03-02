@@ -1,10 +1,9 @@
 <template>
   <PageWrapper>
     <ProseMain>
-      <PageBanner id="top" />
       <NavigationMenu
-        :intraItems="menuItems.intraItems"
         :interItems="menuItems.interItems"
+        :intraItems="undefined"
       />
       <slot />
     </ProseMain>

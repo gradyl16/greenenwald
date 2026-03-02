@@ -1,10 +1,23 @@
+<template>
+  <Container>
+    <ProseH2>News</ProseH2>
+    <UAccordion :items="items" />
+  </Container>
+</template>
+
 <script setup lang="ts">
 const items = ref<AccordionItem[]>([
   {
-    label: "Published at my first workshop",
+    label: "Received First Award at PRISM '26",
+    icon: "uil:trophy",
+    content:
+      "The wonderful group at the STS lab helped me earn an award on my first publication. Our paper was awarded the Palo Alto Networks Best Paper Runner-Up at the workshop for Provenance, Reasoning, and Investigation for Security in the Monitored Environment (PRISM 2026). I had the privilege of leading an interactive tutorial that walked workshop attendees through a provenance tracing exercise using Windows EDR telemetry. I am eternally grateful to Professor Bates for affording me the opportunity to work with this team on an awesome project.",
+  },
+  {
+    label: "Published First Work at PRISM '26",
     icon: "uil:file-alt",
     content:
-      "Took me long enough! I'm excited to announce that I am an author on my first academic paper, published at PRISM, colocated with NDSS '26. It won't be long before I get a first author paper :)",
+      "I'm excited to announce that I am an author on my first academic paper! Feel free to read it (linked below), but, in a nutshell, Windows' operating system design exacerbates the long-standing dependency explosion issue with provenance-based analysis. We propose some interesting graph tracing techniques to address this problem.",
   },
   {
     label: "Committed to Ph.D. Program @ UIUC",
@@ -26,7 +39,3 @@ const items = ref<AccordionItem[]>([
   },
 ]);
 </script>
-
-<template>
-  <UAccordion :items="items" />
-</template>

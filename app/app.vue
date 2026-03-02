@@ -8,34 +8,32 @@ useSeoMeta({
     "Explorer. Security researcher. Juggler. Come find out what else I am at my personal website.",
   ogImage: "https://greenenwald.com/portrait.jpg",
 });
-
-const hydrated = ref(false);
-
-onMounted(() => {
-  hydrated.value = true;
-});
 </script>
 
 <template>
-  <Transition name="fade" appear>
-    <div v-show="hydrated" class="transition-opacity duration-500">
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </div>
-  </Transition>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
 
 <style>
-.fade-enter-active {
-  transition: opacity 0.5s ease;
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
 }
-
-.fade-enter-from {
+.page-enter-from,
+.page-leave-to {
   opacity: 0;
+  filter: blur(1rem);
 }
 
-.fade-enter-to {
-  opacity: 1;
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.3s;
+}
+.layout-enter-from,
+.layout-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
 }
 </style>

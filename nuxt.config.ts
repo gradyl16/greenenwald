@@ -1,12 +1,24 @@
 // import remarkGfm from "remark-gfm"
 
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // debug: true,
   app: {
-    pageTransition: { name: "page", mode: "out-in" },
-    layoutTransition: { name: "layout", mode: "out-in" },
+    pageTransition: {
+      name: 'page',
+      mode: 'out-in'
+    },
+    layoutTransition: {
+      name: 'layout',
+      mode: 'out-in'
+    }
   },
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   routeRules: {
     "/": { prerender: true },
   },
@@ -62,3 +74,4 @@ export default defineNuxtConfig({
   },
   compatibilityDate: "2024-11-27",
 });
+

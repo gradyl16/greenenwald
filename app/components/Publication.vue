@@ -1,35 +1,51 @@
 <template>
-  <article
-    class="group rounded-xl border border-gray/40 bg-dark-gray/40 p-5 sm:p-6 transition hover:border-white/60 hover:bg-test/60"
-  >
-    <h4 class="text-cyan transition">
-      {{ pub.title }}
-    </h4>
-
-    <p class="text-purple">{{ formattedAuthors }}.</p>
-
-    <p class="text-purple">
-      <span v-if="!pub.published" class="italic opacity-80">(To appear)</span>
-      <span> In the Proceedings of </span>
-      <a
-        class="text-pink underline hover:text-pink/80"
-        :href="pub.venue.url"
-        target="_blank"
-        rel="noopener"
+  <Card>
+    <NuxtLink
+      class="group inline-block transition duration-300 no-underline hover:no-underline"
+      to="/prism2026-12.pdf"
+      target="_blank"
+      rel="noopener"
+      external
+    >
+      <ProseH4
+        class="flex items-center gap-2 !my-0 !text-cyan transition-colors duration-300 group-hover:!text-pink"
       >
-        {{ pub.venue.name }}
-      </a>
-    </p>
-
+        {{ pub.title }}
+        <Icon
+          v-if="pub.published"
+          name="bi:filetype-pdf"
+          size="1em"
+          mode="svg"
+          class="text-pink transition-colors duration-300 group-hover:text-red"
+        />
+      </ProseH4>
+    </NuxtLink>
+    <p class="text-purple">{{ formattedAuthors }}.</p>
+    <span v-if="!pub.published" class="italic opacity-80">(To appear)</span>
+    <span class="text-purple"> In the Proceedings of the </span>
+    <NuxtLink
+      class="text-orange underline hover:text-yellow hover:decoration-yellow transition-colors duration-300"
+      :to="pub.venue.url"
+      target="_blank"
+      rel="noopener"
+      external
+    >
+      {{ pub.venue.name }}
+    </NuxtLink>
     <p class="mt-1 text-sm text-purple/80">
       {{ pub.venue.date }}, {{ pub.venue.loc }}
     </p>
-  </article>
+    <div
+      v-if="pub.award"
+      class="font-extrabold italic text-pink flex items-center gap-2"
+    >
+      {{ pub.award.title }}
+      <Icon name="uil:trophy" size="1em" mode="svg" class="text-pink" />
+    </div>
+  </Card>
 </template>
 
 <script setup lang="ts">
-import type { Publication } from "~/types/publication";
-
 const props = defineProps<{
   pub: Publication;
 }>();

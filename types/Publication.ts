@@ -7,5 +7,8 @@ export interface Publication {
     loc: string;
     url: string;
   };
-  published: false;
+  published: boolean;
+  award?: {
+    title: string;
+  };
 }

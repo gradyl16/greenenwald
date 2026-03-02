@@ -1,17 +1,15 @@
 <template>
   <div>
-    <!-- About Blog -->
-    <section id="about">
-      <UContainer>
+    <ProseSection id="about">
+      <Container>
         <BlogAbout />
-      </UContainer>
-    </section>
+      </Container>
+    </ProseSection>
 
-    <!-- Recent Posts -->
-    <section id="recent">
-      <UContainer>
+    <ProseSection id="recent">
+      <Container>
         <BlogRecents />
-      </UContainer>
-    </section>
+      </Container>
+    </ProseSection>
   </div>
 </template>

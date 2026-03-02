@@ -1,8 +1,8 @@
 <template>
-  <h2>Publications</h2>
-  <div>
+  <Container>
+    <ProseH2>Publications</ProseH2>
     <Publication v-for="pub in pubs" :key="pub.title" :pub="pub" />
-  </div>
+  </Container>
 </template>
 
 <script setup lang="ts">
@@ -24,13 +24,10 @@ const pubs = ref<Publication[]>([
       loc: "San Diego, CA",
       url: "https://www.ndss-symposium.org/ndss2026/co-located-events/prism/",
     },
+    published: true,
+    award: {
+      title: "Palo Alto Networks Best Paper Runner-Up",
+    },
   },
 ]);
-
-const formattedAuthors = computed(() => {
-  const a = pub.authors;
-  if (a.length <= 1) return a.join("");
-  if (a.length === 2) return `${a[0]} and ${a[1]}`;
-  return `${a.slice(0, -1).join(", ")}, and ${a[a.length - 1]}`;
-});
 </script>

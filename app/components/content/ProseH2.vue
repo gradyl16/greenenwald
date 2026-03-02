@@ -1,5 +1,7 @@
 <template>
-  <h2 class="text-2xl text-cyan my-4">
+  <h2
+    class="font-[Proxima_Nova_Semibold] mb-4 text-green sm:text-4xl text-3xl font-bold"
+  >
     <slot />
   </h2>
 </template>

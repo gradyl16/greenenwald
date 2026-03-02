@@ -1,21 +1,15 @@
 <template>
   <div>
-    <section id="about">
-      <UContainer>
-        <HomeAbout />
-      </UContainer>
-    </section>
+    <ProseSection id="about">
+      <HomeAbout />
+    </ProseSection>
 
-    <section id="news">
-      <UContainer>
-        <HomeNews />
-      </UContainer>
-    </section>
+    <ProseSection id="news">
+      <HomeNews />
+    </ProseSection>
 
-    <section id="publications">
-      <UContainer>
-        <HomePublications />
-      </UContainer>
-    </section>
+    <ProseSection id="publications">
+      <HomePublications />
+    </ProseSection>
   </div>
 </template>

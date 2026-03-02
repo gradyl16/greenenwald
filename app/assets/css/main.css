@@ -2,11 +2,16 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --color-test: #343746;
-  --color-dark-gray: #21222c;
-  --color-gray: #343746;
+  --color-lighter: #424450;
+  --color-light: #343746;
+  --color-base: #282a36;
+  --color-dark: #21222c;
+  --color-darker: #191A21;
+  --color-gray: #424450;
+  --color-light-gray: #5d6574;
+  --color-selection: #44475a;
+  --color-comment: #6272a4;
   --color-white: #f8f8f2;
-  --color-dark-blue: #6272a4;
   --color-cyan: #8be9fd;
   --color-green: #50fa7b;
   --color-orange: #ffb86c;
@@ -22,69 +27,6 @@
   }
 
   body {
-    @apply bg-gray text-dark-blue;
-  }
-
-  h1 {
-    font-family: "Proxima Nova Semibold";
-    @apply mb-2 text-purple sm:text-6xl text-5xl font-bold;
-  }
-
-  h2 {
-    font-family: "Proxima Nova Semibold";
-    @apply mb-6 text-green sm:text-5xl text-4xl font-bold;
-  }
-
-  h3 {
-    font-family: "Proxima Nova Semibold";
-    @apply text-cyan sm:text-2xl text-xl font-semibold;
-  }
-
-  h4 {
-    font-family: "Proxima Nova Semibold";
-    @apply text-orange sm:text-lg text-base font-semibold;
-  }
-
-  p {
-    @apply sm:text-base text-sm;
-  }
-
-  section {
-    @apply my-10;
-  }
-
-  /* Page transitions */
-  .page-enter-active,
-  .page-leave-active {
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
-  }
-
-  .page-enter-from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  .page-leave-to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition:
-      opacity 0.3s ease,
-      transform 0.3s ease;
-  }
-
-  .fade-enter-from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  .fade-leave-to {
-    opacity: 0;
-    transform: translateY(-10px);
+    @apply bg-base text-comment;
   }
 }

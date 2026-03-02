@@ -3,7 +3,7 @@
     <!-- Filename / Language Header -->
     <div
       v-if="language !== 'text'"
-      class="flex justify-between items-center px-4 py-2 bg-gray/10 text-white rounded-t-md"
+      class="flex justify-between items-center px-4 py-2 bg-base/10 text-white rounded-t-md"
     >
       <div class="space-x-2">
         <Icon :name="languageIcon" />
@@ -20,13 +20,13 @@
     <pre
       :class="[
         $props.class,
-        'relative overflow-x-auto p-4 bg-gray/20',
+        'relative overflow-x-auto p-4 bg-base/20',
         filename ? 'rounded-b-md' : 'rounded-md',
       ]"
     ><slot /></pre>
 
     <button
-      class="absolute top-2 right-2 bg-purple/70 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 hover:bg-dark-blue/80 hover:outline hover:outline-white transition"
+      class="absolute top-2 right-2 bg-purple/70 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 hover:bg-comment/80 hover:outline hover:outline-white transition"
       @click="copyToClipboard"
     >
       <Icon v-if="copied" name="uil:check-circle" />

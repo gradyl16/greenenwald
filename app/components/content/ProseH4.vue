@@ -1,3 +1,7 @@
 <template>
-  <h4 class="font-semibold !text-yellow text-lg mb-4"><slot /></h4>
+  <h4
+    class="font-[Proxima_Nova_Semibold] text-orange sm:text-lg text-base font-semibold my-4"
+  >
+    <slot />
+  </h4>
 </template>
