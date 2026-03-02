@@ -34,6 +34,7 @@
     "@iconify-json/vscode-icons": "^1.2.23",
     "@nuxt/eslint": "^1.4.1",
     "eslint": "^9.29.0",
+    "prettier": "^3.8.1",
     "typescript": "^5.8.3",
     "wrangler": "4.69.0"
   }
