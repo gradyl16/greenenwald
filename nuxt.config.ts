@@ -1,16 +1,13 @@
-// import remarkGfm from "remark-gfm"
-
 export default defineNuxtConfig({
-  // debug: true,
   app: {
     pageTransition: {
-      name: 'page',
-      mode: 'out-in'
+      name: "page",
+      mode: "out-in",
     },
     layoutTransition: {
-      name: 'layout',
-      mode: 'out-in'
-    }
+      name: "layout",
+      mode: "out-in",
+    },
   },
   devtools: {
     enabled: true,
@@ -52,26 +49,8 @@ export default defineNuxtConfig({
     ],
   },
   css: ["~/assets/css/main.css"],
-  content: {
-    build: {
-      markdown: {
-        remarkPlugins: {
-          "remark-gfm": {},
-        },
-        toc: {
-          depth: 2,
-          searchDepth: 2,
-        },
-        highlight: {
-          theme: "dracula",
-          langs: ["py"],
-        },
-      },
-    },
-  },
   future: {
     compatibilityVersion: 4,
   },
   compatibilityDate: "2024-11-27",
 });
-
