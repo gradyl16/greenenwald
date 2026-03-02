@@ -13,7 +13,8 @@ permissions:
 jobs:
   format:
     runs-on: ubuntu-latest
-    - name: Format
+    steps:
+    - name: Prettier
       uses: creyD/prettier_action@v4.6
   build:
     runs-on: ubuntu-latest
