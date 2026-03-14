@@ -8,7 +8,7 @@ export const useMenu = () => {
     {
       label: "CV",
       icon: "uil:file-alt",
-      to: "/GreenenwaldCV2025.pdf",
+      to: "/Greenenwald_CV_2026.pdf",
       target: "_blank",
       external: true,
     },
