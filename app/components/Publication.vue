@@ -20,7 +20,16 @@
         />
       </ProseH4>
     </NuxtLink>
-    <p class="text-purple">{{ formattedAuthors }}.</p>
+    <br />
+    <span class="text-purple" v-for="(author, index) in props.pub.authors" :key="author">
+      <span v-if="author === 'Dylen Greenenwald'" class="underline">{{ author }}</span>
+      <template v-else>{{ author }}</template>
+      <template v-if="index < props.pub.authors.length - 2">, </template>
+      <template v-else-if="index === props.pub.authors.length - 2">
+        {{ props.pub.authors.length === 2 ? " and " : ", and " }}
+      </template>
+    </span>
+    <br />
     <span v-if="!pub.published" class="italic opacity-80">(To appear)</span>
     <span class="text-purple"> In the Proceedings of the </span>
     <NuxtLink

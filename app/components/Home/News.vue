@@ -8,6 +8,12 @@
 <script setup lang="ts">
 const items = ref<AccordionItem[]>([
   {
+    label: "Passed the Qualifying Exam",
+    icon: "uil:presentation-check",
+    content:
+      "Thanks to hard work and my amazing committee, I am now officially a Ph.D. Candidate! My presentation on adversarial web tracking in the online advertising industry was well received, and will serve as a good starting point for my upcoming thesis research.",
+  },
+  {
     label: "Received First Award at PRISM '26",
     icon: "uil:trophy",
     content:
