@@ -22,10 +22,10 @@ jobs:
           node-version: "20"
       - name: Install Bun
         uses: oven-sh/setup-bun@v2
-      - name: Build
-        run: bun install && bun run build
       - name: Format
         run: bunx prettier --write .
+      - name: Build
+        run: bun install && bun run build
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
