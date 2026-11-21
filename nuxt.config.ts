@@ -36,7 +36,6 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/icon",
     "@nuxt/image",
-    "@nuxt/test-utils",
     "@nuxt/content",
     "@nuxthub/core",
   ],
