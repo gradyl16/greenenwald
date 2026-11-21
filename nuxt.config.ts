@@ -45,7 +45,17 @@ export default defineNuxtConfig({
         highlight: {
           // Match the site's Dracula palette
           theme: "dracula",
-          langs: ["bash", "shell", "python", "javascript", "typescript", "json", "vue", "html", "css"],
+          langs: [
+            "bash",
+            "shell",
+            "python",
+            "javascript",
+            "typescript",
+            "json",
+            "vue",
+            "html",
+            "css",
+          ],
         },
       },
     },

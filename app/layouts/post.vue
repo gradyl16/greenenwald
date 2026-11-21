@@ -1,9 +1,7 @@
 <template>
   <PageWrapper>
     <ProseMain>
-      <NavigationMenu
-        :inter-items="menuItems.interItems"
-      />
+      <NavigationMenu :inter-items="menuItems.interItems" />
       <slot />
     </ProseMain>
     <PageFooter />

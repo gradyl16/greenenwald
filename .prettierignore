@@ -1,0 +1,9 @@
+# Generated / vendored
+.nuxt
+.output
+.data
+.wrangler
+dist
+node_modules
+bun.lock
+public

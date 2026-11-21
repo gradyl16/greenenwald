@@ -2,7 +2,9 @@
   <NuxtLayout name="post">
     <ProseSection>
       <BaseContainer class="flex flex-col items-center text-center">
-        <ProseH2>{{ is404 ? "Page Not Found" : "Something Went Wrong" }}</ProseH2>
+        <ProseH2>{{
+          is404 ? "Page Not Found" : "Something Went Wrong"
+        }}</ProseH2>
         <ProseP>
           {{
             is404

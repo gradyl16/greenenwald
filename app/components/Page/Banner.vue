@@ -1,9 +1,6 @@
 <template>
   <BaseContainer class="mt-2 text-center">
-    <ProseH1
-      class="transition-all duration-300 ease-in-out"
-      :style="fadeStyle"
-    >
+    <ProseH1 class="transition-all duration-300 ease-in-out" :style="fadeStyle">
       {{ currentContent.headline }}
     </ProseH1>
 
