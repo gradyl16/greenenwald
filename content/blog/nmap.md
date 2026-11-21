@@ -1,6 +1,7 @@
 ---
 title: Network Enumeration with Nmap
 description: Learn how to use the popular network scanning tool, Nmap. Walk through a Hack the Box Academy module with me to learn the basics.
+date: "2025-06-21"
 ---
 
 # Network Enumeration with Nmap
