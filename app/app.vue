@@ -6,7 +6,11 @@ useSeoMeta({
     "Explorer. Security researcher. Juggler. Come find out what else I am at my personal website.",
   ogDescription:
     "Explorer. Security researcher. Juggler. Come find out what else I am at my personal website.",
-  ogImage: "https://greenenwald.com/portrait.jpg",
+  ogImage: "https://greenenwald.com/images/portrait.jpg",
+  ogImageAlt: "Portrait of Dylen Greenenwald",
+  ogType: "website",
+  ogUrl: "https://greenenwald.com",
+  twitterCard: "summary",
 });
 </script>
 
