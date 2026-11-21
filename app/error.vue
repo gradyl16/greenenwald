@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="post">
     <ProseSection>
-      <Container class="flex flex-col items-center text-center">
+      <BaseContainer class="flex flex-col items-center text-center">
         <ProseH2>{{ is404 ? "Page Not Found" : "Something Went Wrong" }}</ProseH2>
         <ProseP>
           {{
@@ -16,7 +16,7 @@
         >
           {{ backLabel }}
         </button>
-      </Container>
+      </BaseContainer>
     </ProseSection>
   </NuxtLayout>
 </template>

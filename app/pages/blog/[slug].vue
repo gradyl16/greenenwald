@@ -1,8 +1,8 @@
 <template>
   <ProseSection>
-    <Container>
+    <BaseContainer>
       <ContentRenderer v-if="page" :value="page" />
-    </Container>
+    </BaseContainer>
   </ProseSection>
 </template>
 

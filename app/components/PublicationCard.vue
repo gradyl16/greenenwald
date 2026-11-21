@@ -1,5 +1,5 @@
 <template>
-  <Card>
+  <BaseCard>
     <component
       :is="pub.pdf ? NuxtLink : 'div'"
       v-bind="
@@ -57,7 +57,7 @@
       {{ pub.award.title }}
       <Icon name="uil:trophy" size="1em" mode="svg" class="text-pink" />
     </p>
-  </Card>
+  </BaseCard>
 </template>
 
 <script setup lang="ts">

@@ -1,8 +1,8 @@
 <template>
-  <Container>
+  <BaseContainer>
     <ProseH2>News</ProseH2>
     <UAccordion :items="items" />
-  </Container>
+  </BaseContainer>
 </template>
 
 <script setup lang="ts">

@@ -1,5 +1,5 @@
 <template>
-  <Container class="mt-2 text-center">
+  <BaseContainer class="mt-2 text-center">
     <ProseH1
       class="transition-all duration-300 ease-in-out"
       :style="fadeStyle"
@@ -13,7 +13,7 @@
     >
       {{ currentContent.tagline }}
     </p>
-  </Container>
+  </BaseContainer>
 </template>
 
 <script setup lang="ts">

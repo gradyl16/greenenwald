@@ -1,5 +1,5 @@
 <template>
-  <Container class="!p-2 mt-2">
+  <BaseContainer class="!p-2 mt-2">
     <nav
       :class="[
         'flex flex-col sm:flex-row mx-4 transition-all duration-300 ease-in-out',
@@ -10,7 +10,7 @@
       <NavigationSection v-if="intraItems" :items="intraItems" />
       <NavigationSection :items="interItems" />
     </nav>
-  </Container>
+  </BaseContainer>
 </template>
 
 <script setup lang="ts">

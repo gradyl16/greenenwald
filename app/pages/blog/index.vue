@@ -1,15 +1,15 @@
 <template>
   <div>
     <ProseSection id="about">
-      <Container>
+      <BaseContainer>
         <BlogAbout />
-      </Container>
+      </BaseContainer>
     </ProseSection>
 
     <ProseSection id="recent">
-      <Container>
+      <BaseContainer>
         <BlogRecents />
-      </Container>
+      </BaseContainer>
     </ProseSection>
   </div>
 </template>

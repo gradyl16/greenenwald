@@ -1,10 +1,10 @@
 <template>
-  <Container>
+  <BaseContainer>
     <ProseH2>Publications</ProseH2>
     <div class="flex flex-col gap-4">
       <PublicationCard v-for="pub in pubs" :key="pub.title" :pub="pub" />
     </div>
-  </Container>
+  </BaseContainer>
 </template>
 
 <script setup lang="ts">

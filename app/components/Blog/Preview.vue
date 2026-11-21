@@ -1,6 +1,6 @@
 <template>
   <NuxtLink :to="post.path" class="block group h-full">
-    <Card class="h-full">
+    <BaseCard class="h-full">
       <ProseH3 class="group-hover:text-purple transition-colors duration-300">
         {{ post.title }}
       </ProseH3>
@@ -13,7 +13,7 @@
       </time>
       <div class="h-px bg-white/20" />
       <ProseP class="mt-4 text-sm">{{ post.description }}</ProseP>
-    </Card>
+    </BaseCard>
   </NuxtLink>
 </template>
 

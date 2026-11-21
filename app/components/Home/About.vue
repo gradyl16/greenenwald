@@ -1,5 +1,5 @@
 <template>
-  <Container>
+  <BaseContainer>
     <ProseH2 class="!mt-0">About</ProseH2>
     <div class="flex flex-col sm:flex-row sm:items-start">
       <div class="flex flex-col mr-6">
@@ -46,5 +46,5 @@
         }"
       />
     </div>
-  </Container>
+  </BaseContainer>
 </template>
