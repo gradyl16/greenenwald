@@ -12,6 +12,7 @@
             class="text-comment underline"
             to="https://nikita-phd.pages.dev"
             target="_blank"
+            rel="noopener"
             external
             >Nikita Borisov</NuxtLink
           >. My research lies at the intersection of web privacy and systems
@@ -23,8 +24,8 @@
           I aim to improve user quality of life through the development of
           privacy-enhancing technologies and the study of emerging tracking
           paradigms.
-          <br />
-          <br />
+        </ProseP>
+        <ProseP class="mt-3">
           While my work is important to me, so are my hobbies. I am an avid
           distance runner, working up to my first marathon. I am also a
           locksport enthusiast (physical security counts too!). I've recently
@@ -39,6 +40,7 @@
       </div>
       <NuxtPicture
         src="/images/portrait.webp"
+        alt="Portrait of Dylen Greenenwald"
         :img-attrs="{
           class: 'rounded-3xl w-full max-w-4xl',
         }"
