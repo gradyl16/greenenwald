@@ -6,7 +6,9 @@
 </template>
 
 <script setup lang="ts">
-const pubs = ref<Publication[]>([
+import type { Publication } from "~/types/Publication";
+
+const pubs: Publication[] = [
   {
     title:
       "How to Effectively Trace Provenance on Windows Endpoint Detection & Response Telemetry",
@@ -29,5 +31,5 @@ const pubs = ref<Publication[]>([
       title: "Palo Alto Networks Best Paper Runner-Up",
     },
   },
-]);
+];
 </script>

@@ -55,6 +55,8 @@
 </template>
 
 <script setup lang="ts">
+import type { Publication } from "~/types/Publication";
+
 const props = defineProps<{
   pub: Publication;
 }>();

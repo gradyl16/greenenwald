@@ -7,7 +7,9 @@
 </template>
 
 <script setup lang="ts">
+import type { MenuItem } from "~/types/NavigationItem";
+
 defineProps<{
-  items: NavigationItem[];
+  items: MenuItem[];
 }>();
 </script>

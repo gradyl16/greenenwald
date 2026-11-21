@@ -16,13 +16,15 @@
 </template>
 
 <script setup lang="ts">
+import type { LinkItem } from "~/types/NavigationItem";
+
 const route = useRoute();
 
-const internalLinks: NavigationItem[] = [
+const internalLinks: LinkItem[] = [
   { label: "Home", to: "/", class: "hover:text-white" },
   { label: "Blog", to: "/blog", class: "hover:text-white" },
 ];
-const externalLinks: NavigationItem[] = [
+const externalLinks: LinkItem[] = [
   {
     to: "https://github.com/gradyl16",
     target: "_blank",

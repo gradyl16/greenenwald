@@ -14,9 +14,11 @@
 </template>
 
 <script setup lang="ts">
+import type { MenuItem } from "~/types/NavigationItem";
+
 defineProps<{
-  intraItems?: NavigationItem[];
-  interItems: NavigationItem[];
+  intraItems?: MenuItem[];
+  interItems: MenuItem[];
 }>();
 
 const route = useRoute();

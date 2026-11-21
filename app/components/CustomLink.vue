@@ -17,5 +17,7 @@
 </template>
 
 <script setup lang="ts">
-const { item } = defineProps<{ item: NavigationItem }>()
+import type { LinkItem } from "~/types/NavigationItem";
+
+const { item } = defineProps<{ item: LinkItem }>();
 </script>

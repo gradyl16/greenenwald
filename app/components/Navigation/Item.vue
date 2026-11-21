@@ -11,5 +11,7 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ item: NavigationItem }>();
+import type { MenuItem } from "~/types/NavigationItem";
+
+defineProps<{ item: MenuItem }>();
 </script>

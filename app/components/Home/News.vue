@@ -6,7 +6,9 @@
 </template>
 
 <script setup lang="ts">
-const items = ref<AccordionItem[]>([
+import type { AccordionItem } from "@nuxt/ui";
+
+const items: AccordionItem[] = [
   {
     label: "Passed the Qualifying Exam",
     icon: "uil:presentation-check",
@@ -43,5 +45,5 @@ const items = ref<AccordionItem[]>([
     content:
       "I accepted a winter sprinternship at Nvisia! I will be working as a DevSecOps Engineer on an internal profile building service that will aid in marketing their consultants to clients, getting exposure to Azure Cloud platforms along the way.",
   },
-]);
+];
 </script>
