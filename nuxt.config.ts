@@ -40,6 +40,17 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthub/core",
   ],
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          // Match the site's Dracula palette
+          theme: "dracula",
+          langs: ["bash", "shell", "python", "javascript", "typescript", "json", "vue", "html", "css"],
+        },
+      },
+    },
+  },
   ui: {
     // Fonts are self-hosted via @font-face in main.css; skip @nuxt/fonts.
     fonts: false,
