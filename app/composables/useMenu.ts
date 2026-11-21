@@ -22,13 +22,7 @@ export const useMenu = () => {
 
   const blogIntra = [
     { label: "About", icon: "uil:document-info", to: "/blog#about" },
-    {
-      label: "Posts",
-      icon: "uil:edit",
-      children: [
-        { label: "Recent Posts", to: "/blog#recent", icon: "uil:bolt" },
-      ],
-    },
+    { label: "Recent Posts", icon: "uil:bolt", to: "/blog#recent" },
   ];
 
   const menuItems = computed(() => ({

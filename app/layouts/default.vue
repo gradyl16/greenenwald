@@ -3,8 +3,8 @@
     <ProseMain>
       <PageBanner id="top" />
       <NavigationMenu
-        :intraItems="menuItems.intraItems"
-        :interItems="menuItems.interItems"
+        :intra-items="menuItems.intraItems"
+        :inter-items="menuItems.interItems"
       />
       <slot />
     </ProseMain>

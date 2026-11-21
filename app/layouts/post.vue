@@ -2,8 +2,7 @@
   <PageWrapper>
     <ProseMain>
       <NavigationMenu
-        :interItems="menuItems.interItems"
-        :intraItems="undefined"
+        :inter-items="menuItems.interItems"
       />
       <slot />
     </ProseMain>
