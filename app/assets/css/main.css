@@ -1,12 +1,41 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+/* Self-hosted fonts (files live in public/fonts) */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/ProximaNovaRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("/fonts/ProximaNovaSemibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  src: url("/fonts/FiraCode.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme static {
+  --font-sans: "Proxima Nova", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Dracula palette */
   --color-lighter: #424450;
   --color-light: #343746;
   --color-base: #282a36;
   --color-dark: #21222c;
-  --color-darker: #191A21;
+  --color-darker: #191a21;
   --color-gray: #424450;
   --color-light-gray: #5d6574;
   --color-selection: #44475a;
@@ -22,11 +51,11 @@
 }
 
 @layer base {
-  * {
-    font-family: "Proxima Nova Regular";
-  }
-
   body {
     @apply bg-base text-comment;
+  }
+
+  ::selection {
+    @apply bg-selection text-white;
   }
 }

@@ -1,5 +1,17 @@
 export default defineNuxtConfig({
   app: {
+    head: {
+      htmlAttrs: { lang: "en" },
+      link: [
+        {
+          rel: "preload",
+          href: "/fonts/ProximaNovaRegular.woff2",
+          as: "font",
+          type: "font/woff2",
+          crossorigin: "",
+        },
+      ],
+    },
     pageTransition: {
       name: "page",
       mode: "out-in",
@@ -22,31 +34,15 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
     "@nuxt/eslint",
-    "@nuxt/fonts",
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/test-utils",
     "@nuxt/content",
     "@nuxthub/core",
   ],
-  fonts: {
-    families: [
-      {
-        name: "Fira Code",
-        provider: "local",
-        src: "/fonts/FiraCode.woff2",
-      },
-      {
-        name: "Proxima Nova",
-        provider: "local",
-        src: "/fonts/ProximaNovaRegular.woff2",
-      },
-      {
-        name: "Proxima Nova Semibold",
-        provider: "local",
-        src: "/fonts/ProximaNovaSemibold.woff2",
-      },
-    ],
+  ui: {
+    // Fonts are self-hosted via @font-face in main.css; skip @nuxt/fonts.
+    fonts: false,
   },
   css: ["~/assets/css/main.css"],
   future: {

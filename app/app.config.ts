@@ -12,13 +12,11 @@ export default defineAppConfig({
       warning: "yellow",
       error: "red",
       neutral: "gray",
-      muted: "dark-gray",
-      elevated: "orange",
     },
     accordion: {
       slots: {
         trigger: "text-xl text-purple",
-        body: "text-md text-dark-blue",
+        body: "text-base text-comment",
         trailingIcon: "text-green",
         leadingIcon: "text-gray",
         item: "border-gray",
