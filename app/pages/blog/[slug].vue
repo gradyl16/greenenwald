@@ -1,19 +1,7 @@
 <template>
   <ProseSection>
-    <Container v-if="page">
-      <ContentRenderer :value="page" />
-    </Container>
-    <Container v-else class="flex justify-center">
-      <ProseH2>Page Not Found</ProseH2>
-      <ProseP>Oops! The content you're looking for doesn't exist.</ProseP>
-      <CustomLink
-        :item="{
-          label: 'Back to Blog',
-          to: '/blog',
-          class:
-            '!no-underline inline-block p-3 mt-2 font-semibold text-cyan/70 bg-light/50 rounded-xl outline outline-light hover:outline-lighter hover:text-purple transition-all duration-300',
-        }"
-      />
+    <Container>
+      <ContentRenderer v-if="page" :value="page" />
     </Container>
   </ProseSection>
 </template>
@@ -24,7 +12,23 @@ definePageMeta({
 });
 
 const route = useRoute();
-const { data: page } = await useAsyncData(route.path, () => {
-  return queryCollection("blog").path(route.path).first();
+const { data: page } = await useAsyncData(route.path, () =>
+  queryCollection("blog").path(route.path).first(),
+);
+
+if (!page.value) {
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Post not found",
+    fatal: true,
+  });
+}
+
+useSeoMeta({
+  title: `${page.value.title} | Mental Overflow`,
+  ogTitle: page.value.title,
+  description: page.value.description,
+  ogDescription: page.value.description,
+  ogType: "article",
 });
 </script>
